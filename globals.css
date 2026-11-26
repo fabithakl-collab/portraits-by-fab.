@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+body { @apply bg-charcoal text-ivory font-sans font-light antialiased; }
+::selection { background: #C5AA75; color: #17251D; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+@layer components {
+  .eyebrow { @apply text-[11px] uppercase tracking-[0.3em] text-gold; }
+  .btn { @apply inline-block border border-gold px-7 py-4 text-xs uppercase tracking-luxe transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold; }
+  .btn-solid { @apply bg-gold text-forest hover:bg-transparent hover:text-ivory; }
+  .btn-ghost { @apply text-ivory hover:bg-gold hover:text-forest; }
+}
